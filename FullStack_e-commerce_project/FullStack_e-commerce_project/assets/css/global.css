@@ -1,0 +1,42 @@
+/* global.css */
+/* global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333; /* خلفية داكنة */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-links {
+  list-style: none; /* إزالة النقاط */
+  display: flex; /* جعلها بجانب بعض */
+  gap: 20px; /* مسافة بين الروابط */
+}
+
+#nav-links a {
+  color: #ffffff; /* لون النص أبيض */
+  text-decoration: none; /* إزالة خط التسطير */
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+#nav-links a:hover {
+  color: #ffcc00; /* لون مميز عند تمرير الماوس */
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+

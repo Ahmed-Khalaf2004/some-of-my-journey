@@ -1,0 +1,370 @@
+/*
+  Full Name: Ahmed Amjad Ibrahim Khalaf
+  University ID: 20220953
+*/
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #34495e;
+  padding: 1rem 5%;
+  color: white;
+  gap: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #542c01bc;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  min-height: 60vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.hero h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.btn:hover {
+  background: #2980b9;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  margin-left: 3%;
+  font-weight: 600;
+}
+.form-group input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #b9b9b9;
+  border-radius: 12px;
+  border: 1px solid #e1e8ed;
+}
+
+.dash-card {
+  background: #34495e;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.dash-card:hover {
+  background: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #34495e;
+  color: white;
+}
+
+.btn-edit {
+  background: #003194;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.btn-del {
+  background: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.btn-add {
+  background: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.form-wrapper {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px; /* مسافة تحت القائمة لضمان عدم التصاق الزر */
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  display: block; /* ضمان ظهورها كعنصر مستقل */
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.report-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #2c3e50;
+}
+.report-section h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.about-card {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-card h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.system-info {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.features li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: #555;
+  font-weight: 500;
+}

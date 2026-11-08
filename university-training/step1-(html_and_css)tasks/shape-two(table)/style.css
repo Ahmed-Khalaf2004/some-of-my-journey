@@ -1,0 +1,44 @@
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 650px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    background-color: #55c400;
+    color: white;
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+}
+
+.yellow {
+    background-color: #fcf8e3;
+}
+
+/* attribute selector */
+input[type="checkbox"] {
+    accent-color: #434141;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}

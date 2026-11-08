@@ -1,0 +1,31 @@
+# Node / React
+node_modules/
+dist/
+build/
+.next/
+coverage/
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# C++ / compiled
+*.exe
+*.o
+*.obj
+bin/
+obj/
+
+# Editors / OS
+.vs/
+.idea/
+Thumbs.db
+.DS_Store

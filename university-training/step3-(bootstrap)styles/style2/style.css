@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  min-height: 64px;
+}
+
+.navbar-brand {
+  font-size: 14px;
+}
+
+.nav-link {
+  font-size: 10px;
+  margin: 0 8px;
+  color: #fff !important;
+}
+
+.nav-link.active {
+  color: #ffc107 !important;
+}
+.hero-feature{
+  /* position: relative; */
+}
+.hero-feature  {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNcjyvutDnDW3sh5ERWvzn4llxOF4rXiUcIVNZcr8qA&s=10');
+   /* width: 100%; */
+  /*height: 100%; */
+  /* position: absolute; */
+  /* float: right; */
+  /* aspect-ratio: 16 / 9; Keeps a 16:9 ratio at any screen size */
+  /* background-size: contain;
+  
+  background-position: center;
+  background-repeat: no-repeat;  */
+  
+}
+
+/* Hero */
+.hero-section {
+  min-height: 210px;
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNcjyvutDnDW3sh5ERWvzn4llxOF4rXiUcIVNZcr8qA&s=10");
+  background-size: cover;
+  background-position: center;
+  position: relative; */
+}
+
+.hero-overlay {
+  min-height: 210px;
+  background: rgba(0, 31, 63, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.hero-section p {
+  max-width: 620px;
+  margin: 10px auto 20px;
+  font-size: 10px;
+}
+
+.hero-section .btn {
+  background-color: #07558c;
+  border: none;
+  font-size: 10px;
+}
+
+/* Feature boxes */
+.features-section {
+  margin-top: -1px;
+  /* background: #073b66; */
+  /* background: rgba(0, 31, 63, 0.55); */
+  background: rgba(0, 31, 63, 0.55);
+}
+
+.feature-box {
+  min-height: 75px;
+  padding: 15px;
+  color: #fff;
+  background: rgba(0, 45, 85, 0.9);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.feature-box i {
+  color: #ffc107;
+  font-size: 22px;
+}
+
+.feature-box h6 {
+  margin: 0 0 5px;
+  font-size: 12px;
+}
+
+.feature-box p {
+  margin: 0;
+  font-size: 9px;
+  color: #ddd;
+}
+
+/* Welcome section */
+.welcome-section {
+  padding: 38px 15px 0;
+}
+
+.welcome-section h2 {
+  color: #173d5c;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.welcome-section p {
+  max-width: 500px;
+  margin: auto;
+  font-size: 9px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.students-image {
+mix-blend-mode: multiply;
+  max-width: 280px;
+  margin-top: 22px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .navbar-nav {
+    padding: 15px 0;
+  }
+
+  .feature-box {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-section h1 {
+    font-size: 23px;
+  }
+}

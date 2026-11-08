@@ -1,0 +1,110 @@
+body {
+    background-color: #dcdcdc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-card {
+    background-color: white;
+    width: 360px;
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background-color: #fce8e6;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon i {
+    color: #9c27b0;
+    font-size: 32px;
+}
+
+.login-card h2 {
+    color: #00bcd4;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 25px 0;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #3a3939;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #00bcd4;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.forgot-pass {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #00acc1;
+}
