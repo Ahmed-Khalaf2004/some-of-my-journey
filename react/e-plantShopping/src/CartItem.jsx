@@ -37,9 +37,19 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(clearCart());
   };
 
-  const handleIncrement = (item) => {};
+  const handleIncrement = (item) => {
+    dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
+  };
 
-  const handleDecrement = (item) => {};
+  const handleDecrement = (item) => {
+    if (item.quantity > 1) {
+      // Still at least 1 left after decreasing
+      dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
+    } else {
+      // Quantity would drop to 0, so remove the plant from the cart
+      dispatch(removeItem(item.name));
+    }
+  };
 
   const handleRemove = (item) => {};
 
