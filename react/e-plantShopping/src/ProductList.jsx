@@ -295,11 +295,9 @@ function ProductList({ onHomeClick }) {
 
   // Total number of plants in the cart (sum of quantities, not number of rows)
   const calculateTotalQuantity = () => {
-    let totalQuantity = 0;
-    cartItems.forEach((item) => {
-      totalQuantity += item.quantity;
-    });
-    return totalQuantity;
+    return cartItems
+      ? cartItems.reduce((total, item) => total + item.quantity, 0)
+      : 0;
   };
 
   // A plant counts as "added" while it is in the cart
