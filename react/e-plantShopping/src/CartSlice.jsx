@@ -30,9 +30,13 @@ export const CartSlice = createSlice({
         itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
       }
     },
+    clearCart: (state) => {
+      // Empty the cart after a successful checkout
+      state.items = [];
+    },
   },
 });
 
-export const { addItem, removeItem, updateQuantity } = CartSlice.actions;
+export const { addItem, removeItem, updateQuantity, clearCart } = CartSlice.actions;
 
 export default CartSlice.reducer;
