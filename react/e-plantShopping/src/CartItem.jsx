@@ -51,10 +51,15 @@ const CartItem = ({ onContinueShopping }) => {
     }
   };
 
-  const handleRemove = (item) => {};
+  const handleRemove = (item) => {
+    dispatch(removeItem(item.name)); // Delete this plant from the cart, whatever its quantity
+  };
 
   // Calculate total cost based on quantity for an item
-  const calculateTotalCost = (item) => {};
+  const calculateTotalCost = (item) => {
+    const cost = parseFloat(item.cost.substring(1)); // "$15" -> 15
+    return cost * item.quantity;
+  };
 
   // After checkout, show a confirmation screen instead of the cart
   if (orderPlaced) {

@@ -290,13 +290,25 @@ function ProductList({ onHomeClick }) {
     setShowCart(false);
   };
 
-  const [addedToCart, setAddedToCart] = useState({});
+  // Read the cart from Redux so the navbar count and buttons update in real time
+  const cartItems = useSelector((state) => state.cart.items);
+
+  // Total number of plants in the cart (sum of quantities, not number of rows)
+  const calculateTotalQuantity = () => {
+    let totalQuantity = 0;
+    cartItems.forEach((item) => {
+      totalQuantity += item.quantity;
+    });
+    return totalQuantity;
+  };
+
+  // A plant counts as "added" while it is in the cart
+  const isInCart = (plantName) => {
+    return cartItems.some((item) => item.name === plantName);
+  };
+
   const handleAddToCart = (product) => {
     dispatch(addItem(product));
-    setAddedToCart((prevState) => ({
-      ...prevState,
-      [product.name]: true,
-    }));
   };
   return (
     <div>
@@ -346,6 +358,9 @@ function ProductList({ onHomeClick }) {
                     id="mainIconPathAttribute"
                   ></path>
                 </svg>
+                <span className="cart_quantity_count">
+                  {calculateTotalQuantity()}
+                </span>
               </h1>
             </a>
           </div>
@@ -372,10 +387,15 @@ function ProductList({ onHomeClick }) {
                     </div>
                     <div className="product-cost">${plant.cost}</div>
                     <button
-                      className="product-button"
+                      className={
+                        isInCart(plant.name)
+                          ? "product-button added-to-cart"
+                          : "product-button"
+                      }
                       onClick={() => handleAddToCart(plant)}
+                      disabled={isInCart(plant.name)}
                     >
-                      Add to Cart
+                      {isInCart(plant.name) ? "Added to Cart" : "Add to Cart"}
                     </button>
                   </div>
                 ))}
